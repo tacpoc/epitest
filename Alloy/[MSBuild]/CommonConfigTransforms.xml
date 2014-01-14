@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/MsBuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(CommonConfigurationFolderName)' == '' ">Debug</Configuration>
+    <CoreConfigurationFolderName>EPiServer</CoreConfigurationFolderName>
+    <CommonConfigurationFolderName>Common</CommonConfigurationFolderName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ReleaseConfigurationFiles Include="$(ProjectDir)..\[Configuration]\$(CoreConfigurationFolderName)\*.config" />
+  </ItemGroup>
+  
+  <Target Name="Build">
+   
+    <Message Text="Applying common config transforms..." />
+    
+    <!-- Transform Web.config -->
+    <TransformXml
+      Source="$(ProjectDir)..\[Configuration]\$(CoreConfigurationFolderName)\Web.config"
+      Transform="$(ProjectDir)..\[Configuration]\$(CommonConfigurationFolderName)\Web.$(CommonConfigurationFolderName).config"
+      Destination="$(ProjectDir)..\Web.config.temp" />
+
+    <!-- Transform connectionStrings.config -->
+    <TransformXml
+      Source="$(ProjectDir)..\[Configuration]\$(CoreConfigurationFolderName)\connectionStrings.config"
+      Transform="$(ProjectDir)..\[Configuration]\$(CommonConfigurationFolderName)\connectionStrings.$(CommonConfigurationFolderName).config"
+      Destination="$(ProjectDir)..\connectionStrings.config.temp" />
+
+    <!-- Transform episerver.config -->
+    <TransformXml
+      Source="$(ProjectDir)..\[Configuration]\$(CoreConfigurationFolderName)\episerver.config"
+      Transform="$(ProjectDir)..\[Configuration]\$(CommonConfigurationFolderName)\episerver.$(CommonConfigurationFolderName).config"
+      Destination="$(ProjectDir)..\episerver.config.temp" />
+
+    <!-- Transform EPiServerFramework.config -->
+    <TransformXml
+      Source="$(ProjectDir)..\[Configuration]\$(CoreConfigurationFolderName)\EPiServerFramework.config"
+      Transform="$(ProjectDir)..\[Configuration]\$(CommonConfigurationFolderName)\EPiServerFramework.$(CommonConfigurationFolderName).config"
+      Destination="$(ProjectDir)..\EPiServerFramework.config.temp" />
+
+    <!-- Transform EPiServerLog.config -->
+    <TransformXml
+      Source="$(ProjectDir)..\[Configuration]\$(CoreConfigurationFolderName)\EPiServerLog.config"
+      Transform="$(ProjectDir)..\[Configuration]\$(CommonConfigurationFolderName)\EPiServerLog.$(CommonConfigurationFolderName).config"
+      Destination="$(ProjectDir)..\EPiServerLog.config.temp" />
+
+    <!-- Transform FileSummary.config -->
+    <TransformXml
+      Source="$(ProjectDir)..\[Configuration]\$(CoreConfigurationFolderName)\FileSummary.config"
+      Transform="$(ProjectDir)..\[Configuration]\$(CommonConfigurationFolderName)\FileSummary.$(CommonConfigurationFolderName).config"
+      Destination="$(ProjectDir)..\FileSummary.config.temp" />
+
+    <Message Text="Finished applying common config transforms" />
+    
+  </Target>
+
+</Project>

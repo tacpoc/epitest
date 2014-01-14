@@ -1,0 +1,16 @@
+﻿@using EPiServer.Core
+@using EPiServer.Templates.Alloy.Controllers
+@model TeaserBlock
+<div class="border">
+    @*Link the teaser block only if a link has been set and not displayed in preview*@
+    @using(Html.BeginConditionalLink(
+        !ContentReference.IsNullOrEmpty(Model.TeaserLink) && !(ViewContext.Controller is PreviewController), 
+        Url.PageLinkUrl(Model.TeaserLink), 
+        Model.TeaserHeading))
+    {
+        <h2 @Html.EditAttributes(x => x.TeaserHeading)>@Model.TeaserHeading</h2>
+        <p @Html.EditAttributes(x => x.TeaserText)>@Model.TeaserText</p>
+        <img src="@Model.TeaserImage" @Html.EditAttributes(x => x.TeaserImage)/>
+    }
+
+</div>

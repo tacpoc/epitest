@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/MsBuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+
+  <ItemGroup>
+    <TempConfigFiles Include="$(ProjectDir)..\*.config.temp" />
+  </ItemGroup>
+  
+  <Target Name="Build">
+
+    <Message Text="Deleting temporary configuration files..." />
+
+    <Delete Files="@(TempConfigFiles)" />
+    
+  </Target>
+
+</Project>

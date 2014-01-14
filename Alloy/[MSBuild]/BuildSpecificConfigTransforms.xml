@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/MsBuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <TempConfigFiles Include="$(ProjectDir)..\*.config.temp" />
+  </ItemGroup>
+  
+  <Target Name="Build">
+   
+    <Message Text="Generating configuration files for $(Configuration) build configuration..." />
+
+    <!-- Apply config transforms and copy resulting configuration files to the site root  -->
+    <Message 
+      Condition="'$(Configuration)'!='$(ReleaseConfigurationName)'" 
+      Text="Transforming configuration files and copying resulting files to the site root..." />
+    
+    <!-- Transform Web.config -->
+    <TransformXml
+      Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\Web.$(Configuration).config')"
+      Source="$(ProjectDir)..\Web.config.temp"
+      Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\Web.$(Configuration).config"
+      Destination="$(ProjectDir)..\Web.config" />
+
+    <!-- Transform connectionStrings.config -->
+    <TransformXml
+      Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\connectionStrings.$(Configuration).config')"
+      Source="$(ProjectDir)..\connectionStrings.config.temp"
+      Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\connectionStrings.$(Configuration).config"
+      Destination="$(ProjectDir)..\connectionStrings.config" />
+
+    <!-- Transform episerver.config -->
+    <TransformXml
+      Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\episerver.$(Configuration).config')"
+      Source="$(ProjectDir)..\episerver.config.temp"
+      Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\episerver.$(Configuration).config"
+      Destination="$(ProjectDir)..\episerver.config" />
+
+    <!-- Transform EPiServerFramework.config -->
+    <TransformXml
+      Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\EPiServerFramework.$(Configuration).config')"
+      Source="$(ProjectDir)..\EPiServerFramework.config.temp"
+      Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\EPiServerFramework.$(Configuration).config"
+      Destination="$(ProjectDir)..\EPiServerFramework.config" />
+
+    <!-- Transform EPiServerLog.config -->
+    <TransformXml
+      Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\EPiServerLog.$(Configuration).config')"
+      Source="$(ProjectDir)..\EPiServerLog.config.temp"
+      Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\EPiServerLog.$(Configuration).config"
+      Destination="$(ProjectDir)..\EPiServerLog.config" />
+
+    <!-- Transform FileSummary.config -->
+    <TransformXml
+      Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\FileSummary.$(Configuration).config')"
+      Source="$(ProjectDir)..\FileSummary.config.temp"
+      Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\FileSummary.$(Configuration).config"
+      Destination="$(ProjectDir)..\FileSummary.config" />
+
+    <Message Text="Site root configuration files have been updated for $(Configuration) build configuration" />
+    
+  </Target>
+
+</Project>

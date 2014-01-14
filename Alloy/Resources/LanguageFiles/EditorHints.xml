@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+  
+  <language name="English" id="en">
+
+    <blocks>
+
+      <buttonblockcontrol>
+        <buttondefaulttext>
+          Button Text
+        </buttondefaulttext>
+      </buttonblockcontrol>
+
+      <norenderer>
+        <message>
+          This block type does not have a renderer for this type of content area.
+        </message>
+      </norenderer>
+    </blocks>
+
+    <renderingerror>
+      <heading>Error while rendering {0} {1}</heading>
+    </renderingerror>
+    
+    <preview>
+      <span12>This preview shows the block '{0}' when rendered in full width</span12>
+      <span8>This preview shows the block '{0}' when rendered in two thirds width</span8>
+      <span6>This preview shows the block '{0}' when rendered in half width</span6>
+      <span4>This preview shows the block '{0}' when rendered in one third width</span4>
+      <norenderer>
+        <atall>No renderer found for '{0}'</atall>
+        <span8>The block '{0}' can only be displayed in full width content areas</span8>
+        <span6>The block '{0}' requires at least a two thirds wide content area</span6>
+        <span4>The block '{0}' requires at least a half width content area</span4>
+      </norenderer>
+    </preview>
+  </language>
+  
+</languages>

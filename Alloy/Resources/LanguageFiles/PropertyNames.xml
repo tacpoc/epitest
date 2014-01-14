@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+
+  <language name="English" id="en">
+
+    <pagetypes>
+      <common>
+        
+        <!-- SitePageData -->
+        <property name="DisableIndexing">
+          <caption>Disable indexing</caption>
+          <help>Prevents the page from being indexed by search engines</help>
+        </property>
+        <property name="MetaDescription">
+          <caption>Page description</caption>
+          <help>Used as the meta description and commonly as an ingress</help>
+        </property>
+        <property name="MetaKeywords">
+          <caption>Keywords</caption>
+          <help></help>
+        </property>
+        <property name="MetaTitle">
+          <caption>Title</caption>
+          <help></help>
+        </property>
+        <property name="TeaserText">
+          <caption>Teaser text</caption>
+          <help>Can be used to display a text other than the description when the page is dropped in a content area</help>
+        </property>
+        <property name="PageImage">
+          <caption>Teaser image</caption>
+          <help>An image used in different contexts, for example when the page is dropped in a content area</help>
+        </property>
+        <property name="HideSiteHeader">
+          <caption>Hide site header</caption>
+          <help>Check this setting to hide the header including the main navigation</help>
+        </property>
+        <property name="HideSiteFooter">
+          <caption>Hide site footer</caption>
+          <help>Check this setting to hide the footer</help>
+        </property>
+        
+        <!-- StandardPage -->
+        <property name="MainBody">
+          <caption>Main body</caption>
+          <help>Main editorial content of the page</help>
+        </property>
+        <property name="MainContentArea">
+          <caption>Large content area</caption>
+          <help></help>
+        </property>
+        
+        <!-- ProductPage -->
+        <property name="UniqueSellingPoints">
+          <caption>Unique selling points</caption>
+          <help></help>
+        </property>
+		<property name="RelatedContentArea">
+		  <caption>Small content area</caption>
+		  <help></help>
+		</property>
+        
+        <!-- StartPage -->
+        <property name="CompanyInformationPageLink">
+          <caption>Company information page</caption>
+          <help></help>
+        </property>
+        <property name="CustomerZonePageLink">
+          <caption>Customer zone</caption>
+          <help></help>
+        </property>
+        <property name="NewsPageLink">
+          <caption>Local news</caption>
+          <help></help>
+        </property>
+        <property name="GlobalNewsPageLink">
+          <caption>Global news</caption>
+          <help></help>
+        </property>
+        <property name="ContactsPageLink">
+          <caption>Contact pages</caption>
+          <help></help>
+        </property>
+        <property name="FirstContentArea">
+          <caption>First content area</caption>
+          <help></help>
+        </property>
+        <property name="SecondContentArea">
+          <caption>Second content area</caption>
+          <help></help>
+        </property>
+        <property name="SiteLogotype">
+          <caption>Logotype</caption>
+          <help></help>
+        </property>
+        <property name="SearchPageLink">
+          <caption>Search page</caption>
+          <help></help>
+        </property>
+        
+        <!-- ContactBlock -->
+        <property name="ContactBlockImage">
+          <caption>Image</caption>
+          <help></help>
+        </property>
+        <property name="ContactBlockHeading">
+          <caption>Heading</caption>
+          <help></help>
+        </property>
+        <property name="ContactPageLink">
+          <caption>Contact</caption>
+          <help>Select who you want to show contact details for</help>
+        </property>
+        <property name="ContactBlockLinkText">
+          <caption>Link text</caption>
+          <help></help>
+        </property>
+        <property name="ContactBlockLinkUrl">
+          <caption>Link</caption>
+          <help></help>
+        </property>
+        
+        <!-- PageListBlock -->
+        <property name="PageListHeading">
+          <caption>Heading</caption>
+          <help></help>
+        </property>
+        <property name="PageListIncludePublishDate">
+          <caption>Include publish date</caption>
+          <help></help>
+        </property>
+        <property name="PageListIncludeIntroduction">
+          <caption>Include description</caption>
+          <help></help>
+        </property>
+        <property name="PageListSortOrder">
+          <caption>Sort order</caption>
+          <help></help>
+        </property>
+        <property name="PageListCount">
+          <caption>Max count</caption>
+          <help></help>
+        </property>
+        <property name="PageListRoot">
+          <caption>Page list root</caption>
+          <help></help>
+        </property>
+        <property name="PageListRecursive">
+          <caption>Include all levels</caption>
+          <help></help>
+        </property>
+        <property name="PageListPageTypeFilter">
+          <caption>Filter by page type</caption>
+          <help></help>
+        </property>
+        <property name="PageListCategoryFilter">
+          <caption>Category filter</caption>
+          <help>If set, only pages matching at least one of the specified categories will be included in the list</help>
+        </property>
+        
+        <!-- JumbotronBlock -->
+        <property name="JumbotronImage">
+          <caption>Image</caption>
+          <help></help>
+        </property>
+        <property name="JumbotronImageDescription">
+          <caption>Image description</caption>
+          <help></help>
+        </property>
+        <property name="JumbotronHeading">
+          <caption>Large heading</caption>
+          <help></help>
+        </property>
+        <property name="JumbotronSubHeading">
+          <caption>Small heading</caption>
+          <help></help>
+        </property>
+        <property name="JumbotronButtonText">
+          <caption>Button text</caption>
+          <help></help>
+        </property>
+        <property name="JumbotronButtonLink">
+          <caption>Button link</caption>
+          <help></help>
+        </property>
+        
+        <!-- FormBlock -->
+        <property name="FormBlockForm">
+          <caption>Form</caption>
+          <help></help>
+        </property>
+        <property name="FormBlockHeading">
+          <caption>Heading</caption>
+          <help></help>
+        </property>
+
+        <!-- TeaserBlock -->
+        <property name="TeaserHeading">
+          <caption>Heading</caption>
+          <help></help>
+        </property>
+        <property name="TeaserText">
+          <caption>Text</caption>
+          <help></help>
+        </property>
+        <property name="TeaserImage">
+          <caption>Image</caption>
+          <help></help>
+        </property>
+        <property name="TeaserLink">
+          <caption>Link</caption>
+          <help></help>
+        </property>
+        <property name="UseWideLayout">
+          <caption>Use wide layout</caption>
+          <help>Forces the block to be rendered in two thirds width</help>
+        </property>
+        
+        <!-- LogotypeBlock -->
+        <property name="SiteLogotypeUrl">
+          <caption>Logotype</caption>
+          <help></help>
+        </property>
+        <property name="SiteLogotypeTitle">
+          <caption>Title</caption>
+          <help></help>
+        </property>
+
+        <!-- VideoBlock -->
+        <property name="VideoBlockUrl">
+          <caption>Video</caption>
+          <help></help>
+        </property>
+        <property name="VideoPreviewImageUrl">
+          <caption>Preview image</caption>
+          <help></help>
+        </property>
+
+      </common>
+    </pagetypes>
+    
+  </language>
+  
+</languages>
